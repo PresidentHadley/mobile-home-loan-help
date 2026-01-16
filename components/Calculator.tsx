@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from "react";
 import { calculateLoan, formatCurrency, type LoanTermYears } from "@/lib/calculations";
-import { DisclaimerBox } from "@/components/DisclaimerBox";
 import { CTAButton } from "@/components/CTAButton";
 
 function clamp(n: number, min: number, max: number) {
@@ -181,15 +180,6 @@ export function Calculator() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="rounded-2xl border border-gray-200 bg-gray-50 p-4 text-sm leading-relaxed text-gray-700">
-        <div className="font-semibold text-gray-900">Educational estimates only</div>
-        <p className="mt-2">
-          This calculator provides rough estimates for educational purposes. Actual loan terms depend on your credit,
-          income, property type, down payment, and lender requirements. Results do not constitute a loan offer or rate
-          guarantee. Consult with a licensed lender for accurate quotes.
-        </p>
       </div>
     </div>
   );
