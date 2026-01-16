@@ -29,38 +29,38 @@ function InfoCard({ title, children }: { title: string; children: React.ReactNod
 export default function HomePage() {
   return (
     <div className="space-y-12">
-      <section className="grid gap-8 lg:grid-cols-2 lg:items-center">
-        <div>
-          <div className="inline-flex items-center rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-900">
-            Educational guides • Not a lender
-          </div>
-          <h1 className="mt-4 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-            Understanding Mobile Home Financing Made Simple
-          </h1>
-          <p className="mt-4 text-base leading-relaxed text-gray-600">
-            Manufactured home loans can feel confusing — especially with leased land, older homes, or credit challenges.
-            We break it down in plain language and connect you with licensed brokers when you want personalized help.
-          </p>
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <CTAButton href="/get-help">Get Personalized Help</CTAButton>
-            <Link className="text-sm font-semibold text-gray-800 underline underline-offset-4" href="/requirements">
-              See typical requirements
-            </Link>
-          </div>
-          <p className="mt-4 text-xs text-gray-500">
-            Requirements vary by lender and state. This site is educational — no guarantees of approval or rates.
-          </p>
+      <section className="space-y-6">
+        <div className="inline-flex items-center rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-900">
+          Educational guides • Not a lender
         </div>
+        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          Understanding Mobile Home Financing Made Simple
+        </h1>
+        <p className="max-w-3xl text-base leading-relaxed text-gray-600">
+          Manufactured home loans can feel confusing — especially with leased land, older homes, or credit challenges.
+          We break it down in plain language and connect you with licensed brokers when you want personalized help.
+        </p>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <CTAButton href="/get-help">Get Personalized Help</CTAButton>
+          <Link className="text-sm font-semibold text-gray-800 underline underline-offset-4" href="/requirements">
+            See typical requirements
+          </Link>
+        </div>
+        <p className="text-xs text-gray-500">
+          Requirements vary by lender and state. This site is educational — no guarantees of approval or rates.
+        </p>
+      </section>
 
-        <div className="rounded-3xl bg-gradient-to-br from-blue-50 via-white to-amber-50 p-6">
+      <section className="rounded-3xl bg-gradient-to-br from-blue-50 via-white to-amber-50 p-6 sm:p-8">
+        <div className="max-w-3xl">
           <div className="text-sm font-semibold text-gray-900">Quick estimate</div>
           <p className="mt-2 text-sm leading-relaxed text-gray-600">
             Use the calculator below for a rough monthly payment estimate. For accurate quotes, talk to a licensed
             lender.
           </p>
-          <div className="mt-4">
-            <Calculator />
-          </div>
+        </div>
+        <div className="mt-6">
+          <Calculator />
         </div>
       </section>
 

@@ -27,7 +27,7 @@ export function Calculator() {
 
   return (
     <div className="space-y-6">
-      <div className="grid gap-8 xl:grid-cols-[0.95fr_1.05fr]">
+      <div className="space-y-6">
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
           <div className="text-sm font-semibold text-gray-900">Inputs</div>
 
@@ -149,7 +149,7 @@ export function Calculator() {
               <div className="text-sm font-medium text-gray-700">Monthly payment</div>
               <div className="text-lg font-bold text-gray-900">{formatCurrency(outputs.monthlyPayment)}</div>
             </div>
-            <div className="grid gap-4 xl:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2">
               <div className="rounded-xl border border-gray-200 p-5">
                 <div className="text-xs font-semibold text-gray-500">Down payment amount</div>
                 <div className="mt-1 text-base font-bold text-gray-900">{formatCurrency(outputs.downPaymentAmount)}</div>
