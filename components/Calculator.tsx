@@ -34,7 +34,7 @@ export function Calculator() {
         guarantee. Consult with a licensed lender for accurate quotes.
       </DisclaimerBox>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
           <div className="text-sm font-semibold text-gray-900">Inputs</div>
 
@@ -156,20 +156,20 @@ export function Calculator() {
               <dt className="text-sm font-medium text-gray-700">Monthly payment</dt>
               <dd className="text-lg font-bold text-gray-900">{formatCurrency(outputs.monthlyPayment)}</dd>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-xl border border-gray-200 p-4">
+            <div className="grid gap-4 lg:grid-cols-2">
+              <div className="rounded-xl border border-gray-200 p-5">
                 <dt className="text-xs font-semibold text-gray-500">Down payment amount</dt>
                 <dd className="mt-1 text-base font-bold text-gray-900">{formatCurrency(outputs.downPaymentAmount)}</dd>
               </div>
-              <div className="rounded-xl border border-gray-200 p-4">
+              <div className="rounded-xl border border-gray-200 p-5">
                 <dt className="text-xs font-semibold text-gray-500">Loan amount</dt>
                 <dd className="mt-1 text-base font-bold text-gray-900">{formatCurrency(outputs.loanAmount)}</dd>
               </div>
-              <div className="rounded-xl border border-gray-200 p-4">
+              <div className="rounded-xl border border-gray-200 p-5">
                 <dt className="text-xs font-semibold text-gray-500">Total interest</dt>
                 <dd className="mt-1 text-base font-bold text-gray-900">{formatCurrency(outputs.totalInterest)}</dd>
               </div>
-              <div className="rounded-xl border border-gray-200 p-4">
+              <div className="rounded-xl border border-gray-200 p-5">
                 <dt className="text-xs font-semibold text-gray-500">Total cost</dt>
                 <dd className="mt-1 text-base font-bold text-gray-900">{formatCurrency(outputs.totalCost)}</dd>
               </div>
