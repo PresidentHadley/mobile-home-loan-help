@@ -27,13 +27,13 @@ export function Calculator() {
 
   return (
     <div className="space-y-6">
-      <div className="space-y-6">
+      <div className="grid gap-6 lg:grid-cols-2">
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
           <div className="text-sm font-semibold text-gray-900">Inputs</div>
 
           <div className="mt-5 space-y-6">
             <div>
-              <div className="flex items-end justify-between gap-3">
+              <div className="grid grid-cols-[1fr_auto] items-end gap-3">
                 <label className="text-sm font-medium text-gray-700" htmlFor="homePrice">
                   Home price
                 </label>
@@ -62,7 +62,7 @@ export function Calculator() {
             </div>
 
             <div>
-              <div className="flex items-end justify-between gap-3">
+              <div className="grid grid-cols-[1fr_auto] items-end gap-3">
                 <label className="text-sm font-medium text-gray-700" htmlFor="downPayment">
                   Down payment (%)
                 </label>
@@ -91,7 +91,7 @@ export function Calculator() {
             </div>
 
             <div>
-              <div className="flex items-end justify-between gap-3">
+              <div className="grid grid-cols-[1fr_auto] items-end gap-3">
                 <label className="text-sm font-medium text-gray-700" htmlFor="interestRate">
                   Interest rate (%)
                 </label>
