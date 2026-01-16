@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CTAButton } from "@/components/CTAButton";
 
 export const metadata: Metadata = {
@@ -9,6 +10,42 @@ export const metadata: Metadata = {
 };
 
 export default function LeasedLandPage() {
+  const faq = [
+    {
+      question: "Is a manufactured home on leased land a good investment?",
+      answer:
+        "It depends on your goals, budget, and the specific park. Leased land can offer a lower purchase price than land-owned property, but factors like lot rent increases, park rules, home age/condition, and resale demand can impact long-term value. Consider it a lifestyle/affordability decision first, and ask a licensed professional to review your full costs."
+    },
+    {
+      question: "Can you put a mobile home on leased land?",
+      answer:
+        "Often yes — many buyers place or purchase homes in mobile home parks where the land is leased. The key is that the park must approve the home and the buyer, and financing options can differ from land-owned scenarios. Requirements vary by park, lender, and state."
+    },
+    {
+      question: "How much is a land lease for a mobile home?",
+      answer:
+        "Lot rent varies widely by location and park. It can include (or exclude) utilities, trash, water/sewer, and community fees. Always confirm the current lot rent, what’s included, and how increases are handled in the lease before buying."
+    },
+    {
+      question: "Can I get a mortgage on leased land?",
+      answer:
+        "Usually not a traditional mortgage, because many mortgage programs require the land and home to be secured as real estate. In leased-land situations, chattel-style financing is often more common. Some exceptions may exist depending on the property and lender, but it varies by lender and state."
+    }
+  ] as const;
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer
+      }
+    }))
+  };
+
   return (
     <div className="space-y-10">
       <div>
@@ -80,6 +117,41 @@ export default function LeasedLandPage() {
           <CTAButton href="/get-help">Connect with a specialist</CTAButton>
         </div>
       </section>
+
+      <section className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+        <h2 className="text-2xl font-bold text-gray-900">Leased land FAQ</h2>
+        <p className="mt-2 text-sm leading-relaxed text-gray-600">
+          Quick answers to common questions people search for. These are educational and can vary by lender, park, and
+          state.
+        </p>
+
+        <div className="mt-6 space-y-6">
+          {faq.map((item) => (
+            <div key={item.question} className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
+              <h3 className="text-base font-bold text-gray-900">{item.question}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray-700">{item.answer}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-6 text-sm text-gray-700">
+          Want state-specific guidance? Start here:{" "}
+          <Link className="font-semibold underline" href="/states/california">
+            California manufactured home financing
+          </Link>{" "}
+          (and{" "}
+          <Link className="font-semibold underline" href="/states">
+            other states
+          </Link>
+          ).
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
     </div>
   );
 }

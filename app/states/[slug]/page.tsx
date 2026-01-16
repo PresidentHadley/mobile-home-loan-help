@@ -47,6 +47,46 @@ export default function StateLandingPage({ params }: Props) {
   const state = getStateLandingBySlug(params.slug);
   if (!state) return notFound();
 
+  const isCalifornia = state.slug === "california";
+
+  const caFaq = [
+    {
+      question: "Can I get a loan for a mobile home on leased land in California?",
+      answer:
+        "Often yes, but it’s usually not a traditional mortgage because the land is leased. In-park/leased-land purchases commonly use chattel-style financing or other specialized manufactured home programs. Availability and requirements vary by lender, park, and borrower profile."
+    },
+    {
+      question: "Can I get a mortgage on leased land in California?",
+      answer:
+        "Usually not a standard mortgage, since many mortgage programs require the land and home to be secured as real estate. In leased-land situations, lenders more commonly use personal-property style loans. Some exceptions may exist depending on the property and lender, but it varies."
+    },
+    {
+      question: "How much is lot rent (land lease) in California mobile home parks?",
+      answer:
+        "It varies widely by city and park. Before buying, confirm the current lot rent, what’s included (utilities/fees), and how increases are handled in the park lease. Lot rent is a key part of affordability alongside the loan payment."
+    },
+    {
+      question: "Is a manufactured home in a California park a good investment?",
+      answer:
+        "It depends. Many buyers choose parks for affordability and lifestyle, but lot rent increases, park rules, home condition, and local demand can affect long-term value. Treat it as a full-cost decision (home payment + lot rent + utilities/fees), and consult licensed professionals for your specific scenario."
+    }
+  ] as const;
+
+  const caFaqJsonLd = isCalifornia
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: caFaq.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer
+          }
+        }))
+      }
+    : null;
+
   return (
     <div className="space-y-10">
       <div className="space-y-4">
@@ -148,6 +188,34 @@ export default function StateLandingPage({ params }: Props) {
               income, bank statements, and home/land details — but exact requirements vary by lender.
             </p>
           </SectionCard>
+
+          {isCalifornia ? (
+            <SectionCard title="California park / leased-land FAQ">
+              <p className="text-gray-600">
+                These are common questions people search for when looking for <span className="font-semibold text-gray-800">mobile home loans in California parks</span>.
+                Answers are educational and vary by lender and park.
+              </p>
+              <div className="mt-3 space-y-4">
+                {caFaq.map((item) => (
+                  <div key={item.question} className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
+                    <h3 className="text-base font-bold text-gray-900">{item.question}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-gray-700">{item.answer}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-4 text-sm text-gray-700">
+                Want help narrowing options?{" "}
+                <Link className="font-semibold underline" href="#get-help">
+                  Request help in California
+                </Link>{" "}
+                or read our{" "}
+                <Link className="font-semibold underline" href="/leased-land">
+                  leased land guide
+                </Link>
+                .
+              </p>
+            </SectionCard>
+          ) : null}
         </div>
 
         <div id="get-help" className="rounded-3xl bg-gradient-to-br from-blue-50 via-white to-amber-50 p-6">
@@ -169,6 +237,14 @@ export default function StateLandingPage({ params }: Props) {
       <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5 text-sm text-gray-700">
         Looking for another state? Visit <Link className="font-semibold underline" href="/states">Browse by State</Link>.
       </div>
+
+      {caFaqJsonLd ? (
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(caFaqJsonLd) }}
+        />
+      ) : null}
     </div>
   );
 }
