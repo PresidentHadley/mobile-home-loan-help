@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { DisclaimerBox } from "@/components/DisclaimerBox";
 import { CTAButton } from "@/components/CTAButton";
 
 export const metadata: Metadata = {
@@ -20,11 +19,6 @@ export default function RequirementsPage() {
           but <span className="font-semibold">requirements vary by lender and state</span>.
         </p>
       </div>
-
-      <DisclaimerBox title="Important">
-        This page is educational. Lenders set their own underwriting guidelines, and programs change. Consult a licensed
-        lender for current requirements.
-      </DisclaimerBox>
 
       <section className="grid gap-6 lg:grid-cols-2">
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">

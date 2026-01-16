@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { DisclaimerBox } from "@/components/DisclaimerBox";
 import { CTAButton } from "@/components/CTAButton";
 
 export const metadata: Metadata = {
@@ -18,11 +17,6 @@ export default function LeasedLandPage() {
           Buying a manufactured home in a park (leased land) is common — and it changes how financing works.
         </p>
       </div>
-
-      <DisclaimerBox title="Quick disclaimer">
-        This page is educational. Programs and requirements vary by lender and state. Consult a licensed lender for
-        current options.
-      </DisclaimerBox>
 
       <section className="grid gap-6 lg:grid-cols-2">
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">

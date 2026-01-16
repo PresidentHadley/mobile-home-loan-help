@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { DisclaimerBox } from "@/components/DisclaimerBox";
 import { CTAButton } from "@/components/CTAButton";
 
 export const metadata: Metadata = {
@@ -19,10 +18,6 @@ export default function NewVsUsedPage() {
           <span className="text-gray-500"> (Varies by lender and state.)</span>
         </p>
       </div>
-
-      <DisclaimerBox title="Educational note">
-        Programs and guidelines change. This page is educational and does not guarantee approval, rates, or terms.
-      </DisclaimerBox>
 
       <section className="grid gap-6 lg:grid-cols-2">
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
