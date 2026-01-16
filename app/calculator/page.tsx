@@ -20,7 +20,7 @@ export default function CalculatorPage() {
       <div>
         <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Loan Calculator</h1>
         <p className="mt-3 max-w-2xl text-base leading-relaxed text-gray-600">
-          Use this to get a rough payment estimate. Actual rates and terms depend on your credit, income, property
+          Use this to get a rough payment estimate. Actual terms and pricing depend on your credit, income, property
           details, down payment, and lender requirements.
         </p>
       </div>

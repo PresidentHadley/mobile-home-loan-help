@@ -118,7 +118,8 @@ export function Calculator() {
                 <span>12%</span>
               </div>
               <p className="mt-2 text-xs text-gray-500">
-                Rates shown are examples only — your rate depends on credit and other factors.
+                This is an input for educational estimates only. Actual interest depends on credit, income, and lender
+                guidelines.
               </p>
             </div>
 

@@ -47,7 +47,7 @@ export default function HomePage() {
           </Link>
         </div>
         <p className="text-xs text-gray-500">
-          Requirements vary by lender and state. This site is educational — no guarantees of approval or rates.
+          Requirements vary by lender and state. This site is educational — no guarantees of approval or specific terms.
         </p>
       </section>
 

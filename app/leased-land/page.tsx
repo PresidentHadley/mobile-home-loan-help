@@ -76,11 +76,9 @@ export default function LeasedLandPage() {
           <h2 className="text-xl font-bold text-gray-900">Chattel loans (simple explanation)</h2>
           <p className="mt-3 text-sm leading-relaxed text-gray-600">
             A chattel loan is often used when the home is treated more like personal property than real estate. It can
-            be common for leased-land situations. Terms, rates, and requirements vary by lender and credit profile.
+            be common for leased-land situations. Terms, pricing, and requirements vary by lender and credit profile.
           </p>
-          <p className="mt-3 text-xs text-gray-500">
-            Rates shown in ads are examples only — your rate depends on credit and other factors.
-          </p>
+          <p className="mt-3 text-xs text-gray-500">We avoid quoting pricing examples because they change and vary widely.</p>
         </div>
 
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
@@ -96,7 +94,7 @@ export default function LeasedLandPage() {
             <div>
               <div className="text-sm font-semibold text-gray-900">Cons</div>
               <ul className="mt-2 list-disc space-y-2 pl-5">
-                <li>Rates can be higher than traditional mortgages</li>
+                <li>Total borrowing costs can be higher than traditional mortgages</li>
                 <li>Shorter terms may increase monthly payments</li>
               </ul>
             </div>

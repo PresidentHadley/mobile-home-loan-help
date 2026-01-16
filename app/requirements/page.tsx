@@ -35,7 +35,7 @@ export default function RequirementsPage() {
                 terms.
               </li>
               <li>
-                <span className="font-semibold text-gray-800">Fair</span>: options may exist with higher rates or
+                <span className="font-semibold text-gray-800">Fair</span>: options may exist with higher borrowing costs or
                 down payment.
               </li>
               <li>

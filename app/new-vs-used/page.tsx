@@ -4,7 +4,7 @@ import { CTAButton } from "@/components/CTAButton";
 export const metadata: Metadata = {
   title: "New vs Used Manufactured Home Financing (What Changes)",
   description:
-    "Learn how financing differs for new vs used manufactured/mobile homes, including HUD code age guidelines, condition requirements, and typical rate differences. Varies by lender and state.",
+    "Learn how financing differs for new vs used manufactured/mobile homes, including HUD code age guidelines, condition requirements, and typical cost differences. Varies by lender and state.",
   alternates: { canonical: "/new-vs-used" }
 };
 
@@ -14,7 +14,7 @@ export default function NewVsUsedPage() {
       <div>
         <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">New vs Used: Financing Differences</h1>
         <p className="mt-3 max-w-3xl text-base leading-relaxed text-gray-600">
-          Whether a home is new or used can impact lender options, required documentation, and sometimes interest rates.
+          Whether a home is new or used can impact lender options, required documentation, and sometimes overall borrowing costs.
           <span className="text-gray-500"> (Varies by lender and state.)</span>
         </p>
       </div>
@@ -37,12 +37,12 @@ export default function NewVsUsedPage() {
         </div>
 
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900">Typical rate differences (with disclaimers)</h2>
+          <h2 className="text-xl font-bold text-gray-900">Typical cost differences (educational)</h2>
           <p className="mt-3 text-sm leading-relaxed text-gray-600">
-            Used homes or chattel scenarios can sometimes have higher rates than newer homes with land ownership, but
-            <span className="font-semibold"> rates shown are examples only</span> — your rate depends on credit, down
-            payment, property type, and lender guidelines.
+            Used homes or leased-land/chattel scenarios can sometimes have higher total borrowing costs than newer homes
+            with land ownership. Your pricing depends on credit, down payment, property type, and lender guidelines.
           </p>
+          <p className="mt-3 text-xs text-gray-500">We avoid quoting pricing ranges because they change and vary widely.</p>
         </div>
 
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">

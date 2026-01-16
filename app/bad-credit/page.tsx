@@ -33,7 +33,7 @@ export default function BadCreditPage() {
             </li>
             <li>
               <span className="font-semibold text-gray-800">Poor</span>: specialized programs may exist, often with
-              higher rates or more cash down.
+              higher borrowing costs or more cash down.
             </li>
           </ul>
           <p className="mt-3 text-xs text-gray-500">Requirements vary by lender and state.</p>
@@ -42,7 +42,7 @@ export default function BadCreditPage() {
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
           <h2 className="text-xl font-bold text-gray-900">What to expect (typical)</h2>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-gray-600">
-            <li>Higher interest rates vs top-tier credit (rates depend on credit and other factors).</li>
+            <li>Higher borrowing costs vs top-tier credit (pricing depends on credit and other factors).</li>
             <li>Down payments may be larger (often 10%–30%, varies by lender).</li>
             <li>More documentation to verify income and stability.</li>
           </ul>
