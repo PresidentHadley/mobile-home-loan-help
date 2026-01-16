@@ -152,7 +152,7 @@ function leadAutoReplyEmail(lead: LeadInput) {
       </div>
       <div style="padding:18px 20px; color:#111827;">
         <p style="margin:0 0 12px; font-size:14px; line-height:1.6;">
-          Hi ${escapeHtml(lead.name)}, thanks for your inquiry. A licensed broker serving <strong>${escapeHtml(
+          Hi ${escapeHtml(lead.name)}, thanks for your inquiry. A broker licensed in <strong>${escapeHtml(
     lead.state
   )}</strong> will contact you within 24 hours to discuss your options.
         </p>

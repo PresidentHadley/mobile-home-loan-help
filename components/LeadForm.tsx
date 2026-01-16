@@ -108,7 +108,7 @@ export function LeadForm({ sourcePage }: { sourcePage: string }) {
       <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
         <div className="text-lg font-bold text-emerald-900">Thank you!</div>
         <p className="mt-2 text-sm leading-relaxed text-emerald-900">
-          A licensed broker in <span className="font-semibold">{stateLabel(submitResult.state)}</span> will contact you
+          A broker licensed in <span className="font-semibold">{stateLabel(submitResult.state)}</span> will contact you
           within 24 hours to discuss your options.
         </p>
         <p className="mt-3 text-sm text-emerald-900">
