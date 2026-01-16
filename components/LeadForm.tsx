@@ -28,7 +28,15 @@ function humanizeTimeline(t: LeadInput["timeline"]) {
   }
 }
 
-export function LeadForm({ sourcePage }: { sourcePage: string }) {
+export function LeadForm({
+  sourcePage,
+  prefillState,
+  prefillPropertyState
+}: {
+  sourcePage: string;
+  prefillState?: string;
+  prefillPropertyState?: string;
+}) {
   const [submitResult, setSubmitResult] = useState<ApiResponse | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -37,8 +45,8 @@ export function LeadForm({ sourcePage }: { sourcePage: string }) {
       name: "",
       email: "",
       phone: "",
-      state: "",
-      property_state: "",
+      state: prefillState || "",
+      property_state: prefillPropertyState || "",
       home_type: "new",
       credit_range: "fair",
       timeline: "1-3months",
@@ -47,7 +55,7 @@ export function LeadForm({ sourcePage }: { sourcePage: string }) {
       hp: "",
       consent: false
     }),
-    [sourcePage]
+    [sourcePage, prefillState, prefillPropertyState]
   );
 
   const {

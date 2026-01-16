@@ -6,6 +6,8 @@ const NAV = [
   { href: "/leased-land", label: "Leased Land" },
   { href: "/bad-credit", label: "Bad Credit" },
   { href: "/new-vs-used", label: "New vs Used" },
+  { href: "/states", label: "States" },
+  { href: "/resources", label: "Resources" },
   { href: "/get-help", label: "Get Help" }
 ];
 
