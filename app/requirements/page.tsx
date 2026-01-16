@@ -25,8 +25,8 @@ export default function RequirementsPage() {
           <h2 className="text-xl font-bold text-gray-900">Credit score (typical ranges)</h2>
           <div className="mt-3 space-y-3 text-sm leading-relaxed text-gray-600">
             <p>
-              Many programs look for a score around <span className="font-semibold text-gray-800">580+</span>, though
-              some lenders work with borrowers in the <span className="font-semibold text-gray-800">500–580</span> range.
+              Many programs look for a score around <span className="font-semibold text-gray-800">600+</span>, though
+              some lenders work with borrowers below <span className="font-semibold text-gray-800">600</span>.
               <span className="text-gray-500"> (Varies by lender and state.)</span>
             </p>
             <ul className="list-disc space-y-2 pl-5">
