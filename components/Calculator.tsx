@@ -28,17 +28,11 @@ export function Calculator() {
 
   return (
     <div className="space-y-6">
-      <DisclaimerBox title="⚠️ Educational Estimates Only">
-        This calculator provides rough estimates for educational purposes. Actual loan terms depend on your credit,
-        income, property type, down payment, and lender requirements. Results do not constitute a loan offer or rate
-        guarantee. Consult with a licensed lender for accurate quotes.
-      </DisclaimerBox>
-
-      <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+      <div className="grid gap-8 xl:grid-cols-[0.95fr_1.05fr]">
+        <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
           <div className="text-sm font-semibold text-gray-900">Inputs</div>
 
-          <div className="mt-4 space-y-5">
+          <div className="mt-5 space-y-6">
             <div>
               <div className="flex items-end justify-between gap-3">
                 <label className="text-sm font-medium text-gray-700" htmlFor="homePrice">
@@ -149,32 +143,32 @@ export function Calculator() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+        <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
           <div className="text-sm font-semibold text-gray-900">Estimated results</div>
-          <dl className="mt-4 grid gap-4">
+          <div className="mt-4 grid gap-4">
             <div className="flex items-center justify-between rounded-xl bg-gray-50 p-4">
-              <dt className="text-sm font-medium text-gray-700">Monthly payment</dt>
-              <dd className="text-lg font-bold text-gray-900">{formatCurrency(outputs.monthlyPayment)}</dd>
+              <div className="text-sm font-medium text-gray-700">Monthly payment</div>
+              <div className="text-lg font-bold text-gray-900">{formatCurrency(outputs.monthlyPayment)}</div>
             </div>
-            <div className="grid gap-4 lg:grid-cols-2">
+            <div className="grid gap-4 xl:grid-cols-2">
               <div className="rounded-xl border border-gray-200 p-5">
-                <dt className="text-xs font-semibold text-gray-500">Down payment amount</dt>
-                <dd className="mt-1 text-base font-bold text-gray-900">{formatCurrency(outputs.downPaymentAmount)}</dd>
+                <div className="text-xs font-semibold text-gray-500">Down payment amount</div>
+                <div className="mt-1 text-base font-bold text-gray-900">{formatCurrency(outputs.downPaymentAmount)}</div>
               </div>
               <div className="rounded-xl border border-gray-200 p-5">
-                <dt className="text-xs font-semibold text-gray-500">Loan amount</dt>
-                <dd className="mt-1 text-base font-bold text-gray-900">{formatCurrency(outputs.loanAmount)}</dd>
+                <div className="text-xs font-semibold text-gray-500">Loan amount</div>
+                <div className="mt-1 text-base font-bold text-gray-900">{formatCurrency(outputs.loanAmount)}</div>
               </div>
               <div className="rounded-xl border border-gray-200 p-5">
-                <dt className="text-xs font-semibold text-gray-500">Total interest</dt>
-                <dd className="mt-1 text-base font-bold text-gray-900">{formatCurrency(outputs.totalInterest)}</dd>
+                <div className="text-xs font-semibold text-gray-500">Total interest</div>
+                <div className="mt-1 text-base font-bold text-gray-900">{formatCurrency(outputs.totalInterest)}</div>
               </div>
               <div className="rounded-xl border border-gray-200 p-5">
-                <dt className="text-xs font-semibold text-gray-500">Total cost</dt>
-                <dd className="mt-1 text-base font-bold text-gray-900">{formatCurrency(outputs.totalCost)}</dd>
+                <div className="text-xs font-semibold text-gray-500">Total cost</div>
+                <div className="mt-1 text-base font-bold text-gray-900">{formatCurrency(outputs.totalCost)}</div>
               </div>
             </div>
-          </dl>
+          </div>
 
           <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-4">
             <div className="text-sm font-semibold text-gray-900">Want accurate quotes?</div>
@@ -187,6 +181,15 @@ export function Calculator() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="rounded-2xl border border-gray-200 bg-gray-50 p-4 text-sm leading-relaxed text-gray-700">
+        <div className="font-semibold text-gray-900">Educational estimates only</div>
+        <p className="mt-2">
+          This calculator provides rough estimates for educational purposes. Actual loan terms depend on your credit,
+          income, property type, down payment, and lender requirements. Results do not constitute a loan offer or rate
+          guarantee. Consult with a licensed lender for accurate quotes.
+        </p>
       </div>
     </div>
   );
