@@ -73,33 +73,38 @@ export default function LeasedLandPage() {
         </div>
 
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900">Chattel loans (simple explanation)</h2>
+          <h2 className="text-xl font-bold text-gray-900">Chattel loans</h2>
           <p className="mt-3 text-sm leading-relaxed text-gray-600">
             A chattel loan is often used when the home is treated more like personal property than real estate. It can
             be common for leased-land situations. Terms, pricing, and requirements vary by lender and credit profile.
           </p>
-          <p className="mt-3 text-xs text-gray-500">We avoid quoting pricing examples because they change and vary widely.</p>
         </div>
 
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-gray-900">Pros and cons (high level)</h2>
-          <div className="mt-3 grid gap-4 text-sm text-gray-600 sm:grid-cols-2">
-            <div>
-              <div className="text-sm font-semibold text-gray-900">Pros</div>
-              <ul className="mt-2 list-disc space-y-2 pl-5">
-                <li>May fit park/leased-land scenarios</li>
-                <li>Often faster closings than complex mortgages</li>
-              </ul>
-            </div>
-            <div>
-              <div className="text-sm font-semibold text-gray-900">Cons</div>
-              <ul className="mt-2 list-disc space-y-2 pl-5">
-                <li>Total borrowing costs can be higher than traditional mortgages</li>
-                <li>Shorter terms may increase monthly payments</li>
-              </ul>
-            </div>
-          </div>
-          <p className="mt-3 text-xs text-gray-500">Exact terms vary by lender, state, and property characteristics.</p>
+          <h2 className="text-xl font-bold text-gray-900">What to plan for</h2>
+          <p className="mt-3 text-sm leading-relaxed text-gray-600">
+            Leased land can be a great fit for many buyers. The key is planning for the full picture and asking the
+            right questions early.
+          </p>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-gray-600">
+            <li>
+              <span className="font-semibold text-gray-800">Lot rent & fees</span>: confirm the current amount, what’s
+              included, and how increases are handled.
+            </li>
+            <li>
+              <span className="font-semibold text-gray-800">Park approvals</span>: many parks have application, age, and
+              rules that can affect the timeline.
+            </li>
+            <li>
+              <span className="font-semibold text-gray-800">Home documentation</span>: year, HUD tags/serial, and title
+              status can matter to lenders.
+            </li>
+            <li>
+              <span className="font-semibold text-gray-800">Insurance & utilities</span>: ask what’s required and what
+              you’ll pay separately.
+            </li>
+          </ul>
+          <p className="mt-3 text-xs text-gray-500">Exact requirements vary by lender, state, and the specific park.</p>
         </div>
       </section>
 
