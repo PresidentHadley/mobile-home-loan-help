@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { DisclaimerBox } from "@/components/DisclaimerBox";
 import { CTAButton } from "@/components/CTAButton";
 
 export const metadata: Metadata = {
@@ -20,11 +19,6 @@ export default function BadCreditPage() {
           (without hype).
         </p>
       </div>
-
-      <DisclaimerBox title="Important">
-        This is educational, not financial advice. Loan availability, rates, and requirements vary by lender and state.
-        Consult a licensed lender for accurate quotes and current guidelines.
-      </DisclaimerBox>
 
       <section className="grid gap-6 lg:grid-cols-2">
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
