@@ -33,6 +33,21 @@ export default function BlogPostPage({ params }: Props) {
   const post = getPostBySlug(params.slug);
   if (!post) return notFound();
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    dateModified: post.date,
+    mainEntityOfPage: `${siteUrl}/blog/${post.slug}`,
+    publisher: {
+      "@type": "Organization",
+      name: "Momentum Growth Partners LLC"
+    }
+  };
+
   return (
     <article className="mx-auto max-w-3xl space-y-8">
       <header className="space-y-3">
@@ -85,6 +100,12 @@ export default function BlogPostPage({ params }: Props) {
           ← Back to blog
         </Link>
       </div>
+
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </article>
   );
 }

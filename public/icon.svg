@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="MobileHomeLoanHelp icon">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e40af"/>
+      <stop offset="1" stop-color="#0b2a7a"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="224" height="224" rx="48" fill="url(#g)"/>
+  <path d="M64 126.5 128 78l64 48.5v63.5a14 14 0 0 1-14 14H78a14 14 0 0 1-14-14z" fill="#ffffff" opacity="0.96"/>
+  <path d="M104 204v-46a10 10 0 0 1 10-10h28a10 10 0 0 1 10 10v46" fill="#1e40af" opacity="0.18"/>
+  <text x="128" y="178" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="34" font-weight="800" fill="#1e40af">MH</text>
+</svg>
+
